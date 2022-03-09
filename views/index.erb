@@ -28,7 +28,7 @@
   <%@datas.each do |data|%>
   <tr>
       <th class="btn">https://l.combu.dev/<%=data.url_short%></th>
-      <th><%=data.url%></th>
+      <th><%=CGI.escapeHTML(data.url)%></th>
   </tr>
   <%end%>
   </table>

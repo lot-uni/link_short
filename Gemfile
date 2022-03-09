@@ -9,6 +9,7 @@ gem 'sinatra-activerecord', '~> 2.0'
 gem 'sinatra-contrib', '~> 2.1'
 gem 'webrick', '~> 1.7'
 gem 'digest'
+gem 'cgi'
 
 group :development do
   gem 'debase'
