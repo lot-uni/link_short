@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="多機能便利なリンク短縮サービス。安心安全？">
+  <title>potly's sort</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <h1>potly's sort</h1>
+  <p>
+    誰でも簡単にリンクを短縮できるサービスです。<br>
+    リンクを短縮したい場合は、下のフォームにURLを入力してください。<br>
+    短縮されたURLは、下のリストで確認できます。
+  </p>
+  <form action="/send_url">
+    <input type="text" name="url" placeholder="短縮したいURLを入力してください">
+    <input type="submit" value="短縮">
+  </form>
+  <h1>作成済み短縮リンク一覧</h1>
+  <table>
+  <tr>
+      <th>短縮リンク</th>
+      <th>元リンク</th>
+  </tr>
+  <%@datas.each do |data|%>
+  <tr>
+      <th class="btn">https://l.combu.dev/<%=data.url_short%></th>
+      <th><%=data.url%></th>
+  </tr>
+  <%end%>
+  </table>
+</body>
+</html>

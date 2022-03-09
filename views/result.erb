@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="多機能便利なリンク短縮サービス。安心安全？">
+  <title>potly's sort</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <h1>potly's sort</h1>
+  <p>
+    「<%=@link.url%>」の短縮URLを作成しました<br>
+    <a href="http://localhost:55014/<%=@link.url_short%>" id="url">http://localhost:55014/<%=@link.url_short%></a><br>
+    <button class="button button1" onclick="copy_to_clipboard();">短縮リンクをコピー</button>
+  </p>
+  <p>
+    <a href="/">トップページに戻る</a>
+  </p>
+</body>
+</html>

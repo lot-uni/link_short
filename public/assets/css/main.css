@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+}
+input[type=text] {
+    width: 500px;
+    padding: 6px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+input[type="submit"]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+table {
+    margin: 30px auto;
+    text-align: left;
+    font-size: 12px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    width: 500px;
+}
+a {
+    color: #2196F3;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin:15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#conten {
+    width: 650px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
