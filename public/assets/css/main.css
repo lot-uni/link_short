@@ -6,6 +6,15 @@ body {
 h1 {
     margin: 0px;
 }
+h1::after {
+    content: '';
+    display: inline-block;/*忘れずに！*/
+    width: 50px;/*画像の幅*/
+    height: 50px;/*画像の高さ*/
+    background-image: url(/assets/img/home.png);
+    background-size: contain;
+    vertical-align: middle;
+}
 h2 {
     padding-top: 20px;
 }
@@ -124,5 +133,15 @@ footer {
 @media screen and (max-width: 400px){
     .content {
         height: 230px;
+    }
+}
+@media screen and (max-width: 360px){
+    #content_top {
+        height: 280px;
+    }
+}
+@media screen and (max-width: 345px){
+    #content_result {
+        height: 220px;
     }
 }
