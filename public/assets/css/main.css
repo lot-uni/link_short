@@ -134,6 +134,9 @@ footer {
     .content {
         height: 230px;
     }
+    #content_top {
+        height: 280px;
+    }
 }
 @media screen and (max-width: 360px){
     #content_top {
