@@ -10,7 +10,7 @@ function send(){
     let value = document.getElementById("url").value;
 
     $.ajax({
-        url: "http://localhost:55015/send",
+        url: "https://l.combu.dev/send",
         type: "GET",
         data: {
             "url": value
