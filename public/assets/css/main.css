@@ -139,6 +139,9 @@ footer {
     #content_top {
         height: 280px;
     }
+    input[type="text"] {
+        width: 60%;
+    }
 }
 @media screen and (max-width: 345px){
     #content_result {
