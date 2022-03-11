@@ -91,6 +91,9 @@ footer {
     #content_result{
         height: 200px;
     }
+    br {
+        display: none;
+    }
 }
 @media screen and (max-width: 610px){
     .css_link {

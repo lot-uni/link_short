@@ -21,10 +21,6 @@ function send(){
         let result = document.getElementById("url_value");
         element.classList.remove("clear");
         result.innerHTML = "https://l.combu.dev/"+obj.url_short;
-        // var tableElem = document.getElementById('table');
-        // var trElem = tableElem.tBodies[0].insertRow(-1);
-        // trElem.insertCell(0).appendChild(document.createTextNode(obj.url_short));
-        // trElem.insertCell(1).appendChild(document.createTextNode(obj.url));
     }).fail(function(){
         alert("通信に失敗しました。");
     });
