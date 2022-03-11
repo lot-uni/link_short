@@ -18,7 +18,7 @@ end
 
 get '/send' do
   if Link.find_by(url: params[:url])==nil
-    Link.create(url: params[:url], url_short: Digest::MD5.hexdigest(params[:url]))
+    Link.create(url: params[:url], url_short: SecureRandom.urlsafe_base64(5))
     list = Link.where({url: params[:url]}).first
     data = {url: list.url,url_short: list.url_short}
     data.to_json
