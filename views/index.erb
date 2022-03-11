@@ -10,41 +10,41 @@
   <script type="text/javascript" src="/assets/js/main.js"></script>
 </head>
 <body>
-  <div id="content_top">
+  <div id="content_top" class="content">
     <h1>potly's sort</h1>
     <p id="top">
-      誰でも簡単にリンクを短縮できるサービスです。リンクを短縮したい場合は、下のフォームにURLを入力してください。短縮されたURLは、下のリストで確認できます。
+      誰でも簡単にリンクを短縮できるサービスです。<br>リンクを短縮したい場合は、下のフォームにURLを入力してください。<br>短縮されたURLは、下のリストで確認できます。
     </p>
     <input type="text" name="url" id="url" placeholder="短縮したいURLを入力してください">
     <button class="button button1" onclick="send();">短縮</button>
   </div>
-  <div id="content_result" class="clear">
+  <div id="content_result" class="content clear">
     <h2>短縮URLを作成しました</h2>
     <p>
       <div id="lit">
-        <div id="url_value" style="display: initial;"></div>
+        <p id="url_value"></p>
       </div>
       
       <button class="button button1" onclick="copy_to_clipboard();">短縮リンクをコピー</button>
     </p>
   </div>
-  <div id="content_list">
-    <h2>作成済み短縮リンク一覧</h2>
-    <table id="table">
-      <tr>
-        <th>短縮リンク</th>
-        <th>元リンク</th>
-      </tr>
-      <%@datas.each do |data|%>
-        <tr>
-          <td class="css_link">https://l.combu.dev/<%=data.url_short%></td>
-          <td class="css_short"><%=CGI.escapeHTML(data.url)%></td>
-        </tr>
-      <%end%>
-    </table>
-    <footer>
-      <p>© 2022 Combu_uni</p>
-    </footer>
-  </div>
+  <footer>
+    <p>© 2022 Combu_uni</p>
+  </footer>
+  <%# <div id="content_list"> %>
+    <%# <h2>作成済み短縮リンク一覧</h2> %>
+    <%# <table id="table"> %>
+      <%# <tr> %>
+        <%# <th>短縮リンク</th> %>
+        <%# <th>元リンク</th> %>
+      <%# </tr> %>
+      <%# <%@datas.each do |data|%>
+        <%# <tr> %>
+          <%# <td class="css_link">https://l.combu.dev/<%=data.url_short%></td>
+          <%# <td class="css_short"><%=CGI.escapeHTML(data.url)%></td>
+        <%# </tr> %>
+      <%# <%end%>
+    <%# </table> %>
+  <%# </div> %>
 </body>
 </html>
