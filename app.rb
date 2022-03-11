@@ -24,6 +24,28 @@ get '/send_url' do
   erb :result
 end
 
+get '/send' do
+  if Link.find_by(url: params[:url])==nil
+    Link.create(url: params[:url], url_short: Digest::MD5.hexdigest(params[:url]))
+    list = Link.where({url: params[:url]}).first
+    data = {url: list.url,url_short: list.url_short}
+    data.to_json
+  else
+    list = Link.where({url: params[:url]}).first
+    data = {url: list.url,url_short: list.url_short}
+    data.to_json
+  end
+end
+
+get '/redirect/:url' do
+  if Link.find_by(url: params[:url])==nil
+    Link.create(url: params[:url], url_short: Digest::MD5.hexdigest(params[:url]))
+    link=Link.where({url: params[:url]}).first
+    data = {url: params[:url],url_short: link.url_short}
+    data.to_json
+  end
+end
+
 get '/:url_short' do
   if Link.where({url_short: params[:url_short]}).first!=nil
     link=Link.where({url_short: params[:url_short]}).first

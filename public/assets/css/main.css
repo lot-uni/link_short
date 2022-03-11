@@ -1,28 +1,29 @@
 body {
     text-align: center;
+    margin: 0 auto;
+}
+h1 {
+    margin: 0px;
+}
+h2 {
+    padding-top: 20px;
 }
 input[type=text] {
     width: 500px;
     padding: 6px 20px;
     margin: 8px 0;
+    font-size: 16px;
     box-sizing: border-box;
     border: 3px solid #ccc;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
 }
-input[type="submit"]{
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-}
 table {
-    margin: 30px auto;
     text-align: left;
+    margin: 10px auto 20px;
     font-size: 12px;
+    width: 900px;
 }
 table, th, td {
     border: 1px solid black;
@@ -38,15 +39,37 @@ button {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 15px;
-    margin:15px;
+    padding: 6px 15px;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
-#conten {
-    width: 650px;
+footer {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+#content_top {
+    width: 1000px;
+    height: 210px;
+    padding: 15px 0px;
+    margin: 10px auto 10px auto;
+    border-radius: 20px;
+    background-color: #ccc;
+}
+#content_result {
+    width: 1000px;
     height: 150px;
     margin: 0 auto;
+    border-radius: 20px;
     background-color: #ccc;
+}
+#content_list {
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #ccc;
+}
+.clear {
+    display: none;
 }

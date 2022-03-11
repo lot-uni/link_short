@@ -6,31 +6,44 @@
   <meta name="description" content="多機能便利なリンク短縮サービス。安心安全？">
   <title>potly's sort</title>
   <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="/assets/js/main.js"></script>
 </head>
 <body>
-  <h1>potly's sort</h1>
-  <p>
-    誰でも簡単にリンクを短縮できるサービスです。<br>
-    リンクを短縮したい場合は、下のフォームにURLを入力してください。<br>
-    短縮されたURLは、下のリストで確認できます。
-  </p>
-  <form action="/send_url">
-    <input type="text" name="url" placeholder="短縮したいURLを入力してください">
-    <input type="submit" value="短縮">
-  </form>
-  <h1>作成済み短縮リンク一覧</h1>
-  <table>
-  <tr>
-      <th>短縮リンク</th>
-      <th>元リンク</th>
-  </tr>
-  <%@datas.each do |data|%>
-  <tr>
-      <th class="btn">https://l.combu.dev/<%=data.url_short%></th>
-      <th><%=CGI.escapeHTML(data.url)%></th>
-  </tr>
-  <%end%>
-  </table>
+  <div id="content_top">
+    <h1>potly's sort</h1>
+    <p>
+      誰でも簡単にリンクを短縮できるサービスです。<br>
+      リンクを短縮したい場合は、下のフォームにURLを入力してください。<br>
+      短縮されたURLは、下のリストで確認できます。
+    </p>
+    <input type="text" name="url" id="url" placeholder="短縮したいURLを入力してください">
+    <button class="button button1" onclick="send();">短縮</button>
+  </div>
+  <div id="content_result" class="clear">
+    <h2>短縮URLを作成しました</h2>
+    <p>
+      <div id="url_value" style="display: initial;"></div>
+      <button class="button button1" onclick="copy_to_clipboard();">短縮リンクをコピー</button>
+    </p>
+  </div>
+  <div id="content_list">
+    <h2>作成済み短縮リンク一覧</h2>
+    <table id="table">
+      <tr>
+        <th>短縮リンク</th>
+        <th>元リンク</th>
+      </tr>
+      <%@datas.each do |data|%>
+        <tr>
+          <td class="btn">https://l.combu.dev/<%=data.url_short%></td>
+          <td><%=CGI.escapeHTML(data.url)%></td>
+        </tr>
+      <%end%>
+    </table>
+    <footer>
+      <p>© 2022 Combu_uni</p>
+    </footer>
+  </div>
 </body>
 </html>
