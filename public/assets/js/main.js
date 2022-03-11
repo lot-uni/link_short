@@ -20,7 +20,7 @@ function send(){
         let element = document.getElementById("content_result");
         let result = document.getElementById("url_value");
         element.classList.remove("clear");
-        result.innerHTML = "http://localhost:55015/"+obj.url_short;
+        result.innerHTML = "https://l.combu.dev/"+obj.url_short;
         var tableElem = document.getElementById('table');
         var trElem = tableElem.tBodies[0].insertRow(-1);
         trElem.insertCell(0).appendChild(document.createTextNode(obj.url_short));
