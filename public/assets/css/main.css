@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    margin: 0 auto;
+    margin: 30px;
 }
 h1 {
     margin: 0px;
@@ -49,8 +49,12 @@ footer {
     padding-bottom: 10px;
     font-size: 12px;
 }
+#top {
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
 #content_top {
-    width: 1000px;
     height: 210px;
     padding: 15px 0px;
     margin: 10px auto 10px auto;
@@ -58,18 +62,78 @@ footer {
     background-color: #ccc;
 }
 #content_result {
-    width: 1000px;
     height: 150px;
     margin: 0 auto;
     border-radius: 20px;
     background-color: #ccc;
 }
 #content_list {
-    width: 1000px;
     margin: 0 auto;
     border-radius: 20px;
     background-color: #ccc;
 }
 .clear {
     display: none;
+}
+@media screen and (max-width: 1000px){
+    table {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 780px){
+    #url_value {
+        color: #4CAF50;
+        max-width: 500px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    button {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 700px){
+    #content_top {
+        height: 240px;
+    }
+    input[type=text] {
+        width: 75%;
+    }
+    #lit {
+        max-width: 500px;
+        overflow: hidden;
+        text-overflow: "..";
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 500px){
+    body {
+        margin: 10px;
+    }
+    table {
+        min-width: 100px;
+    }
+}
+@media screen and (max-width: 480px){
+    table {
+        width: 100px;
+        height: 200px;
+    }
+    input[type=text] {
+        width: 80%;
+    }
+    .css_link {
+        width: 80px;
+    }
+    .css_short {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: "..";
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 390px){
+    body {
+        margin:5px;
+    }
 }
