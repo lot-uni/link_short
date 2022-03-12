@@ -19,7 +19,7 @@ end
 get '/send' do
   if Link.find_by(url: params[:url])==nil
     short_url = SecureRandom.urlsafe_base64(5)
-    while short_url == Link.find_by(short_url: short_url).short_url do
+    while short_url ==Link.where({url: params[:url]}).first do
       puts "create new short_url"
       short_url = SecureRandom.urlsafe_base64(5)
     end
