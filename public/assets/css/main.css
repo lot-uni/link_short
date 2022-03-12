@@ -1,7 +1,11 @@
 body {
     text-align: center;
     color:#fff;
+    background-color:#ccc;
     margin: 30px;
+}
+h1,h2,p {
+    color: rgb(100, 98, 98);
 }
 h1 {
     margin: 0px;
@@ -9,7 +13,7 @@ h1 {
 h1::after {
     content: '';
     display: inline-block;/*忘れずに！*/
-    width: 50px;/*画像の幅*/
+    width: 40px;/*画像の幅*/
     height: 50px;/*画像の高さ*/
     background-image: url(/assets/img/home.png);
     background-size: contain;
@@ -71,13 +75,13 @@ footer {
     padding: 15px 0px;
     margin: 10px auto 10px auto;
     border-radius: 20px;
-    background-color: #ccc;
+    background-color: #fff;
 }
 #content_result {
     height: 180px;
     margin: 0 auto;
     border-radius: 20px;
-    background-color: #ccc;
+    background-color: #fff;
     text-align: center;
 }
 .clear {
